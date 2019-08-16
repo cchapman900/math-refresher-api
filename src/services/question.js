@@ -1,4 +1,4 @@
-const Question = require('../models/test');
+const Question = require('../models/question');
 
 class QuestionService {
   constructor(db) {

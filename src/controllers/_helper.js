@@ -1,12 +1,12 @@
 /**
  * Create a response
- * @param statusCode
- * @param message
+ * @param statusCode: number
+ * @param message: string - Optional
  */
-
 module.exports.createResponse = (statusCode, message) => {
   let response = {
-    statusCode: statusCode
+    statusCode: statusCode,
+    headers: {"content-type": "application/json"},
   };
 
   if (message) {
