@@ -10,7 +10,8 @@
     "axios": "^0.18.0"
   },
   "scripts": {
-    "test": "mocha tests/unit/"
+    "test": "mocha tests/unit/",
+    "start": "cd ../ ; sam local start-api -p 8080"
   },
   "devDependencies": {
     "chai": "^4.2.0",
