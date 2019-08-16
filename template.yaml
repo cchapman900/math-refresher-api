@@ -16,6 +16,16 @@ Globals:
         DB_CONNECTION_STRING: ''
 
 Resources:
+  GetQuestionsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: controllers/question.getQuestions
+      Events:
+        GetQuestion:
+          Type: Api
+          Properties:
+            Path: /questions
+            Method: get
   GetQuestionFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
