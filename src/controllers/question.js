@@ -1,5 +1,5 @@
 'use strict';
-const helper = require('./_helper');
+const createResponse = require('./_helper').createResponse;
 const QuestionService = require('../services/question');
 
 const db = require('../utils/db').connect();
@@ -19,8 +19,11 @@ module.exports.getQuestion = async event => {
 
   const questionId = event.pathParameters.questionId;
 
-  const response = await questionService.question(questionId);
+  const response = await questionService.getQuestion(questionId);
 
-  return helper.createResponse(200, response);
-
+  if (response) {
+    return createResponse(200, response);
+  } else {
+    return createResponse(404, `Could not find question with id: ${questionId}`);
+  }
 };

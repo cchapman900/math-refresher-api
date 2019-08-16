@@ -5,10 +5,8 @@ class QuestionService {
     this.db = db;
   }
 
-  async question(id) {
-    const questionResponse = await Question.findOne({firstNumber: id});
-
-    return questionResponse;
+  async getQuestion(id) {
+    return await Question.findOne({firstNumber: id});
   }
 }
 
