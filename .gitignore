@@ -82,6 +82,9 @@ typings/
 .AppleDouble
 .LSOverride
 
+# IDE
+*.code-workspace
+
 # Icon must end with two \r
 Icon
 
