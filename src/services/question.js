@@ -8,8 +8,6 @@ class QuestionService {
   async question(id) {
     const questionResponse = await Question.findOne({firstNumber: id});
 
-    console.log(questionResponse)
-
     return questionResponse;
   }
 }
